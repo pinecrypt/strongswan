@@ -5,4 +5,5 @@ RUN rm /etc/ipsec.conf && ln -s /server-secrets/ipsec.conf /etc/ipsec.conf
 RUN rm /etc/ipsec.secrets && ln -s /server-secrets/ipsec.secrets /etc/ipsec.secrets
 ADD helpers /helpers
 ADD entrypoint.sh /entrypoint.sh
+ADD config/vici.conf /etc/strongswan.d/charon/
 ENTRYPOINT /entrypoint.sh
